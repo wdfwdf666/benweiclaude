@@ -33,3 +33,10 @@ docs/*.txt
 面试.md
 面试1.md
 面试问题答案.md
+
+# Local project notes and packaging metadata excluded from GitHub
+hook介绍.md
+mcp介绍.md
+rewind介绍.md
+项目评测报告.md
+pyproject.toml

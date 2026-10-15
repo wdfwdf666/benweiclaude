@@ -218,6 +218,6 @@ uv run --extra dev python scripts/quality.py
 ```
 
 自动测试使用假模型，不需要 API Key；真实模型联调需要有效密钥和网络。
-工程基准同样不需要 API Key，输出会话恢复、记忆召回、Rewind、Hook、MCP 和子 Agent 并行指标。当前基线、测试边界与后续验收目标见 [项目评测报告.md](项目评测报告.md)。
+工程基准同样不需要 API Key，输出会话恢复、记忆召回、Rewind、Hook、MCP 和子 Agent 并行指标。
 
 `scripts/quality.py` 与 GitHub Actions 执行同一组质量门禁：Ruff 基础静态检查、关键基础模块 mypy 类型检查，以及带分支统计的 pytest 覆盖率。当前最低覆盖率门槛为 75%；82 项自动测试的本地分支覆盖率为 79.43%，其中 CLI 为 72%、`tools.py` 为 87%、沙箱执行器为 79%。CI 在 Windows/Linux 和 Python 3.11/3.12 上运行。
