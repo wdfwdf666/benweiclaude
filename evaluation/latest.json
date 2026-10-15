@@ -1,0 +1,76 @@
+{
+  "method": "Local deterministic benchmark; no real model or network API",
+  "tool_inventory": {
+    "builtin_tools": 40,
+    "unique_tool_names": 40,
+    "hook_events": 14
+  },
+  "memory": {
+    "corpus_size": 515,
+    "fts5_enabled": true,
+    "lexical": {
+      "queries": 10,
+      "recall_at_1_pct": 100.0,
+      "recall_at_5_pct": 100.0,
+      "mrr_at_5": 1.0
+    },
+    "semantic_synonym": {
+      "queries": 5,
+      "recall_at_1_pct": 20.0,
+      "recall_at_5_pct": 20.0,
+      "mrr_at_5": 0.2
+    },
+    "retrieval_latency": {
+      "mean_ms": 3.852,
+      "p50_ms": 3.738,
+      "p95_ms": 3.861
+    }
+  },
+  "session": {
+    "trials": 20,
+    "resume_success_pct": 100.0,
+    "resume_latency": {
+      "mean_ms": 49.118,
+      "p50_ms": 44.945,
+      "p95_ms": 46.948
+    }
+  },
+  "file_checkpoint": {
+    "rewind_trials": 30,
+    "rewind_success_pct": 100.0,
+    "external_conflict_block_pct": 100.0,
+    "rewind_latency": {
+      "mean_ms": 4.709,
+      "p50_ms": 4.682,
+      "p95_ms": 5.095
+    }
+  },
+  "hook": {
+    "trials": 20,
+    "decision_accuracy_pct": 100.0,
+    "subprocess_hook_latency": {
+      "mean_ms": 47.081,
+      "p50_ms": 45.577,
+      "p95_ms": 58.38
+    }
+  },
+  "mcp": {
+    "discovered_tools": 1,
+    "discovery_cold_start_ms": 46.742,
+    "call_success_pct": 100.0,
+    "warm_connection_call_latency": {
+      "mean_ms": 0.189,
+      "p50_ms": 0.185,
+      "p95_ms": 0.263
+    }
+  },
+  "subagent": {
+    "tasks": 3,
+    "sequential_success_pct": 100.0,
+    "parallel_success_pct": 100.0,
+    "sequential_ms": 247.995,
+    "parallel_ms": 85.761,
+    "parallel_speedup_x": 2.89
+  },
+  "total_seconds": 7.201
+}

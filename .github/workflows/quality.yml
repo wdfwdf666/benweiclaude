@@ -1,0 +1,27 @@
+name: quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install Python and dependencies
+        run: uv sync --frozen --extra dev --python ${{ matrix.python-version }}
+      - name: Ruff
+        run: uv run --frozen --extra dev ruff check src tests scripts
+      - name: Mypy critical modules
+        run: uv run --frozen --extra dev mypy
+      - name: Tests and branch coverage
+        run: uv run --frozen --extra dev pytest --cov=codepilot --cov-branch --cov-report=term-missing --cov-report=xml

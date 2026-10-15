@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "delete_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["examples/hooks/block_delete.py"],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
